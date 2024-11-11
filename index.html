@@ -101,6 +101,53 @@
         border-color: transparent;
     }
 }
+ /* CSS umum untuk layout di semua perangkat */
+ .skills-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .skills-images .golang, .skills-images .expressjs {
+    text-align: center;
+    margin: 10px;
+  }
+
+  .skill-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  /* Untuk tampilan laptop dan layar lebih besar */
+  @media (min-width: 768px) {
+    .skills-images {
+      justify-content: space-between;
+    }
+
+    .skill-image {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  /* Untuk tampilan ponsel atau layar kecil */
+  @media (max-width: 767px) {
+    .skills-images {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skill-image {
+      width: 120px;
+      height: 120px;
+    }
+
+    .golang, .expressjs {
+      width: 100%;
+    }
+  }
 
   </style>
   <!-- Header -->
@@ -133,6 +180,7 @@
       </div>
       <section id="hero">
         <div class="hero-left">
+          <br>
           <h3 class="pre-title">My name is</h3>
           <h1 class="hero-name">Michael <span>Sitanggang</span></h1>
           <p class="typing-text" id="coba">I Am Back End Developer</p>
@@ -148,6 +196,7 @@
         <div class="hero-right">
           <img src="./images/Gambar1.jpeg" alt="Person Standing" class="hero-image" />
         </div>
+        <br>
       </section>
 
     </div>
@@ -225,7 +274,7 @@
         <!-- Portfolio 2 -->
         <div class="portfolio">
           <div class="portfolio-cover">
-            <img src="./images/portfolios/portfolio-2.png" alt="Portfolio 1" />
+            <img src="./images/portfolio-2.png" alt="Portfolio 1" />
           </div>
           <div class="portfolio-info">
             <div class="portfolio-title">
@@ -308,7 +357,7 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
 
   <!-- End Skills & Education  -->
